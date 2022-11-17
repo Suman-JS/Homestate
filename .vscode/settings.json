@@ -1,4 +1,5 @@
 {
   "git.ignoreLimitWarning": true,
-  "cSpell.words": ["Homestate", "Suman"]
+  "cSpell.words": ["Homestate", "Suman"],
+  "liveServer.settings.port": 5552
 }

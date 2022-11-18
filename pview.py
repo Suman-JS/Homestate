@@ -1,7 +1,9 @@
-#!C:\Python38-32\python.exe
+#!C:\Users\sm713\AppData\Local\Programs\Python\Python311\python.exe
 print("content-type:text/html\r\n\r\n")
 import cgi
+
 import mysql.connector
+
 form=cgi.FieldStorage()
 db=mysql.connector.connect(host="localhost",user="root",passwd="",db="prop_sdf")
 cur=db.cursor()

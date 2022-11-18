@@ -1,6 +1,8 @@
-#!C:\Python38-32\python.exe
+#!C:\Users\sm713\AppData\Local\Programs\Python\Python311\python.exe
 import cgi
+
 import mysql.connector
+
 form=cgi.FieldStorage()
 a=form.getvalue('a1')
 b=form.getvalue('a2')

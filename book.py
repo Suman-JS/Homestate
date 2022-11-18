@@ -18,12 +18,9 @@ print("""
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>User Registration</title>
+    <title>Book Property</title>
 
     <!-- Icons font CSS-->
     <link href="./vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -34,6 +31,7 @@ print("""
     <!-- Vendor CSS-->
     <link href="./vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="./vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <link rel="icon" href="./icons8-home.svg" type="image/x-icon" />
 
     <!-- Main CSS-->
     <link href="./css/main.css" rel="stylesheet" media="all">
@@ -44,7 +42,7 @@ print("""
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">Registration Form</h2>
+                    <h2 class="title">Book Property</h2>
                     <form action="./book_code.py">
                         <div class="row row-space">
                             
@@ -91,8 +89,5 @@ print("""
     <!-- Main JS-->
     <script src="./js/global.js"></script>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
-
 </html>
-<!-- end document-->
 """%(r[0]))

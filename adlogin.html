@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
 
-    <title>Sign In</title>
+    <title>Admin Login</title>
 
     <style>
       @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
@@ -27,7 +27,7 @@
         bottom: -40px;
         width: auto;
         height: auto;
-        background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+        background-image: url(./images/login-bg.jpg);
         background-size: cover;
         -webkit-filter: blur(5px);
         z-index: 0;
@@ -108,26 +108,41 @@
         margin-top: 10px;
       }
 
-      .login input[type="button"] {
+      .login input[type="submit"] {
         width: 260px;
         height: 35px;
         background: #fff;
         border: 1px solid #fff;
         cursor: pointer;
         border-radius: 2px;
-        color: #a18d6c;
+        color: #fff;
         font-family: "Exo", sans-serif;
         font-size: 16px;
         font-weight: 400;
         padding: 6px;
         margin-top: 10px;
+        transition: 0.3s;
+        transform-origin: bottom;
+        background-color: #e01637;
+      }
+      .login input[type="submit"]::before {
+        background-color: green;
+        position: absolute;
+        top: 7px;
+        left: 110px;
+        opacity: 0;
+        font-size: 24px;
+        transition: 0.3s;
+        transform-origin: bottom;
       }
 
-      .login input[type="button"]:hover {
-        opacity: 0.8;
+      .login input[type="submit"]:hover {
+        opacity: 1;
+        background-color: rgb(52, 194, 52);
+        transform: scale(1.1);
       }
 
-      .login input[type="button"]:active {
+      .login input[type="submit"]:active {
         opacity: 0.6;
       }
 
@@ -153,7 +168,7 @@
         color: rgba(255, 255, 255, 0.6);
       }
     </style>
-
+<link rel="icon" href="./icons8-home.svg" type="image/x-icon" />
     <script src="./js/prefixfree.min.js"></script>
   </head>
 
@@ -161,11 +176,11 @@
     <div class="body"></div>
     <div class="grad"></div>
     <div class="header">
-      <div>Site<span>Login</span></div>
+      <div>Admin<span>Login</span></div>
     </div>
     <br />
     <div class="login">
-      <form action="adlog_code.py">
+      <form action="./adlog_code.py">
         <input type="text" placeholder="username" name="a1" /><br />
         <input type="password" placeholder="password" name="a2" /><br />
         <input type="submit" value="Login" />

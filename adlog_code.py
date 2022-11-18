@@ -17,11 +17,11 @@ for i in x:
 
 if s==1:
 	if b==d:
-		print("location:adwelcome.html\r\n\r\n")
+		print("location:./adwelcome.html\r\n\r\n")
 	else:
-		print("location:adlogin.html?msg=pnot done\r\n\r\n")
+		print("location:./adlogin.html?msg=pnot done\r\n\r\n")
 else:
-	print("location:adlogin.html?msg=enot done\r\n\r\n")
+	print("location:./adlogin.html?msg=enot done\r\n\r\n")
 		
 		
 		

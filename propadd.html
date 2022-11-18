@@ -1,135 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Title Page-->
-    <title>User Registration</title>
-
-    <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-    <!-- Vendor CSS-->
-    <link href="./vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="./vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-
-    <!-- Main CSS-->
-    <link href="./css/main.css" rel="stylesheet" media="all">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+    <title>Add Property</title>
     <link rel="icon" href="./icons8-home.svg" type="image/x-icon" />
-</head>
 
-<body>
-    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
-        <div class="wrapper wrapper--w680">
-            <div class="card card-4">
-                <div class="card-body">
-                    <h2 class="title">Add Property</h2>
-                    <form action="propadd_code.py">
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Area</label>
-                                    <input class="input--style-4" type="text" name="a1">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Location</label>
-                                    <input class="input--style-4" type="text" name="a2">
-                                </div>
-                            </div>
-                        </div>
-                        
-							<div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Price</label>
-                                    <input class="input--style-4" type="text" name="a3">
-                                </div>
-                            </div>
-							
-                        <div class="p-t-15">
-                            <input class="btn btn--radius-2 btn--blue" type="submit">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div id="footer">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="./favicon.ico" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="./css/animate.css" />
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="./css/icomoon.css" />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <!-- Superfish -->
+    <link rel="stylesheet" href="./css/superfish.css" />
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="./css/flexslider.css" />
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="./css/magnific-popup.css" />
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="./css/bootstrap-datepicker.min.css" />
+    <!-- CS Select -->
+    <link rel="stylesheet" href="./css/cs-select.css" />
+    <link rel="stylesheet" href="./css/cs-skin-border.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./icons8-home.svg" type="image/x-icon" />
+
+    <!-- Modernizr JS -->
+    <script src="(./js/modernizr-2.6.2.min.js)"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        padding: 16px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+
+      hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+      }
+
+      .registerbtn {
+        background-color: #04aa6d;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
+
+      .registerbtn:hover {
+        opacity: 1;
+      }
+
+      a {
+        color: dodgerblue;
+      }
+
+      .signin {
+        background-color: #f1f1f1;
+        text-align: center;
+      }
+      .box{
+			margin-top: 110px;
+			margin-bottom: 45px;
+			margin-left: 5%;
+			margin-right: 5%;
+			box-sizing: justify;
+			padding: 30px;
+			text-align: justify;
+			background-color: white;
+			box-shadow: 0px  4px 8px 0px rgba(0,0,0,0.2);
+			border-radius: 15px;
+		}
+    </style>
+  </head>
+
+  <body>
+    <div id="fh5co-wrapper">
+      <div id="fh5co-page">
+        <header id="fh5co-header-section" class="sticky-banner">
           <div class="container">
-            <div class="row row-bottom-padded-md">
-              <div class="col-md-3">
-                <h3 class="section-title">About Homestate</h3>
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind
-                  texts. Separated they live in Bookmarksgrove right at the
-                  coast of the Semantics.
-                </p>
-              </div>
-
-              <div class="col-md-3 col-md-push-1">
-                <h3 class="section-title">Links</h3>
-                <ul>
-                  <li><a href="./index.html">Home</a></li>
-                  <li><a href="./properties.html">Properties</a></li>
+            <div class="nav-header">
+              <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"
+                ><i></i
+              ></a>
+              <h1 id="fh5co-logo">
+                <a href="./index.html"
+                  ><i class="icon-home"></i>Home<span>state</span></a
+                >
+              </h1>
+              <!-- START #fh5co-menu-wrap -->
+              <nav id="fh5co-menu-wrap" role="navigation">
+                <ul class="sf-menu" id="fh5co-primary-menu">
+                  <li class="active"><a href="./index.html">Home</a></li>
+                  <li>
+                    <a href="./properties.html">Properties</a>
+                  </li>
                   <li><a href="./agent.html">Agents</a></li>
                   <li><a href="./blog.html">Blog</a></li>
+                  <li><a href="./login.html">Login</a></li>
+                  <li><a href="./reg.html">Registration</a></li>
                   <li><a href="./contact.html">Contact</a></li>
                 </ul>
-              </div>
+              </nav>
+            </div>
+          </div>
+        </header>
 
-              <div class="col-md-3">
-                <h3 class="section-title">Information</h3>
-                <ul>
-                  <li><a href="#">Terms &amp; Condition</a></li>
-                  <li><a href="#">Privacy &amp; Policy</a></li>
-                  <li><a href="./contact.html">Contact Us</a></li>
-                </ul>
-              </div>
-              <div class="col-md-3">
-                <h3 class="section-title">Newsletter</h3>
-                <p>Subscribe for our newsletter</p>
-                <form class="form-inline" id="fh5co-header-subscribe">
-                  <div class="row">
-                    <div class="col-md-12 col-md-offset-0">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="email"
-                          placeholder="Enter your email"
-                        />
-                        <button type="submit" class="btn btn-default">
-                          <i class="icon-paper-plane"></i>
-                        </button>
-                      </div>
+        <div class="box">
+        <form action="./propadd_code.py">
+          <div class="container">
+            <h1>Add Property</h1>
+            <hr />
+
+            <label><b>Area</b></label>
+            <input
+              type="text"
+              placeholder="Enter Area Of The Property"
+              name="a1"
+              required
+            />
+
+            <label><b>Location</b></label>
+            <input
+              type="text"
+              placeholder="Enter Property Location"
+              name="a2"
+              required
+            />
+
+            <label><b>Price</b></label>
+            <input
+              type="text"
+              placeholder="Enter Property Price"
+              name="a3"
+              required
+            />
+            <hr />
+
+            <button type="submit" class="registerbtn">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+      <div id="footer">
+        <div class="container">
+          <div class="row row-bottom-padded-md">
+            <div class="col-md-3">
+              <h3 class="section-title">About Homestate</h3>
+              <p>
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated
+                they live in Bookmarksgrove right at the coast of the Semantics.
+              </p>
+            </div>
+
+            <div class="col-md-3 col-md-push-1">
+              <h3 class="section-title">Links</h3>
+              <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./properties.html">Properties</a></li>
+                <li><a href="./agent.html">Agents</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-3">
+              <h3 class="section-title">Information</h3>
+              <ul>
+                <li>
+                  <a href="./terms_and_conditions.html"
+                    >Terms &amp; Condition</a
+                  >
+                </li>
+                <li>
+                  <a href="./privacy_and_policy.html">Privacy &amp; Policy</a>
+                </li>
+                <li><a href="./contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3 class="section-title">Newsletter</h3>
+              <p>Subscribe for our newsletter</p>
+              <form class="form-inline" id="fh5co-header-subscribe">
+                <div class="row">
+                  <div class="col-md-12 col-md-offset-0">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter your email"
+                      />
+                      <button type="submit" class="btn btn-default">
+                        <i class="icon-paper-plane"></i>
+                      </button>
                     </div>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <p class="fh5co-social-icons">
-                  <a href="https://twitter.com/ImRaVaNYT"><i class="icon-twitter2"></i></a>
-                  <a href="https://www.facebook.com/suman.rocky07/"><i class="icon-facebook2"></i></a>
-                  <a href="https://www.instagram.com/rocky_ares_yt/"><i class="icon-instagram"></i></a>
-                  <a href="https://www.youtube.com/channel/UCvBKFidBAaGr_9MTfd_VZMQ"><i class="icon-youtube"></i></a>
-                </p>
-              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="fh5co-social-icons">
+                <a href="https://twitter.com/ImRaVaNYT"
+                  ><i class="icon-twitter2"></i
+                ></a>
+                <a href="https://www.facebook.com/suman.rocky07/"
+                  ><i class="icon-facebook2"></i
+                ></a>
+                <a href="https://www.instagram.com/rocky_ares_yt/"
+                  ><i class="icon-instagram"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/channel/UCvBKFidBAaGr_9MTfd_VZMQ"
+                  ><i class="icon-youtube"></i
+                ></a>
+              </p>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
 
     <!-- Jquery JS-->
     <script src="./vendor/jquery/jquery.min.js"></script>
@@ -140,8 +279,6 @@
 
     <!-- Main JS-->
     <script src="./js/global.js"></script>
-
-</body>
-
+  </body>
 </html>
 <!-- end document-->
